@@ -7,7 +7,6 @@
 body {
   margin: 0;
   padding: 0;
-  color: #333;
 }
 
 a:link,
@@ -37,6 +36,7 @@ header .canvas-container .logo {
   font-size: 50px;
   font-family: 'Inter', sans-serif;
   text-decoration: none;
+  color: #333;
 }
 
 header .canvas-container .global-nav {
@@ -89,18 +89,27 @@ header .canvas-container .global-nav li a:hover {
 .section .document-container h1 {
   text-align: center;
   font-family: 'Inter' , sans-serif;
-  font-size: 2.5em;
+  font-size: 38px;
+  color: #333;
 }
 
 .section .document-container h2 {
   text-align: center;
   font-family: 'Inter' , sans-serif;
-  font-size: 2em;
+  font-size: 32px;
+  color: #333;
 }
 
 .section .document-container p {
-  font-size: 1.1em;
+  font-size: 19px;
   color: #888;
   margin: 30px;
+  line-height: 30px;
+}
+
+.section .document-container ul li {
+  font-size: 19px;
+  color: #888;
+  margin: 15px;
   line-height: 30px;
 }
