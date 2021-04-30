@@ -21,7 +21,7 @@ a:visited {
   margin: auto;
 }
 
-.document-container {
+.details-container {
   width: 800px;
   margin: auto;
 }
@@ -147,43 +147,43 @@ footer .canvas-container .copyright {
   object-fit: cover;
 }
 
-.section .document-container img {
+.section .details-container img {
   width: 100%;
   height: 350px;
   object-fit: cover;
 }
 
-.section .document-container {
+.section .details-container {
   padding-bottom: 50px;
   border-bottom: 1px solid #aaa;
 }
 
-.last-section .document-container {
+.last-section .details-container {
   border: none;
 }
 
-.section .document-container h1 {
+.section .details-container h1 {
   text-align: center;
   font-family: 'Inter' , sans-serif;
   font-size: 38px;
   color: #333;
 }
 
-.section .document-container h2 {
+.section .details-container h2 {
   text-align: center;
   font-family: 'Inter' , sans-serif;
   font-size: 32px;
   color: #333;
 }
 
-.section .document-container p {
+.section .details-container p {
   font-size: 19px;
   color: #888;
   margin: 30px;
   line-height: 30px;
 }
 
-.section .document-container ul li {
+.section .details-container ul li {
   font-size: 19px;
   color: #888;
   margin: 15px;
