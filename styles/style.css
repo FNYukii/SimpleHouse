@@ -62,62 +62,45 @@ header .canvas-container .global-nav li a:hover {
 
 
 /* STYLES FOR INDEX.HTML */
-/* WELCOME SECTION */
-.welcome-section {
-  margin-bottom: 100px;
+/* SECTIONS */
+.section {
+  margin: 30px;
 }
 
-.welcome-section .canvas-container img {
+.section .canvas-container img {
   width: 100%;
   height: 450px;
   object-fit: cover;
   margin-top: 20px;
 }
 
-.welcome-section .document-container {
+.section .document-container img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  margin-top: 20px;
+}
+
+.section .document-container {
   padding-bottom: 50px;
   border-bottom: 1px solid #aaa;
 }
 
-.welcome-section .document-container h1 {
+.section .document-container h1 {
   text-align: center;
   font-family: 'Inter' , sans-serif;
   font-size: 2.5em;
 }
 
-.welcome-section .document-container p {
-  font-size: 1.1em;
-  color: #555;
-  margin: 30px;
-  line-height: 30px;
-}
-
-
-/* ABOUT-SECTION */
-.about-section {
-  margin-top: 50px;
-}
-
-.about-section .document-container img {
-  width: 100%;
-  height: 350px;
-  object-fit: cover;
-}
-
-.about-section .document-container {
-  padding-bottom: 50px;
-  border-bottom: 1px solid #aaa;
-}
-
-.about-section .document-container h2 {
+.section .document-container h2 {
   text-align: center;
   font-family: 'Inter' , sans-serif;
   font-size: 2em;
 }
 
-.about-section .document-container p {
+.section .document-container p {
   font-size: 1.1em;
-  color: #555;
+  color: #888;
   margin: 30px;
   line-height: 30px;
 }
