@@ -3,16 +3,18 @@ $(function(){
   
   let isDarkTheme = 0; // 0 : light-theme, 1 : dark-theme.
 
-  let isJustClicked = 0;
+  let isJustSwitched = 0;
 
 
   $('header .canvas-container .theme-switch-button').click(function(){
 
-    isJustClicked = 1;
-    if(isJustClicked){
+    isJustSwitched = 1;
+    console.log("isJustSwitched : " + isJustSwitched);
+    if(isJustSwitched){
       $(this).toggleClass('dark-theme-white');
       $('header .canvas-container .theme-switch-button i').toggleClass('dark-theme-white');
-      isJustClicked = 0;
+      isJustSwitched = 0;
+      console.log("isJustSwitched : " + isJustSwitched);
     }
 
     $(this).mouseout(function () { 
@@ -57,7 +59,7 @@ $(function(){
   );
   
   // theme-switch-button's hover state
-  if(!isJustClicked){
+  if(!isJustSwitched){
 
     $('header .canvas-container .theme-switch-button').hover(
       function(){
