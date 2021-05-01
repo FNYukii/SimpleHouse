@@ -72,11 +72,20 @@ header .canvas-container .theme-switch-button-wrapper {
   border-radius: 50%;
 }
 
+header .canvas-container .theme-switch-button-wrapper:hover {
+  border-color: #000;
+  cursor: pointer;
+}
+
 header .canvas-container .theme-switch-button-wrapper .theme-switch-button {
   font-size: 20px;
   margin-left: 3px;
   line-height: 30px;
   color: #aaa;
+}
+
+header .canvas-container .theme-switch-button-wrapper:hover .theme-switch-button {
+  color: #000;
 }
 
 
