@@ -63,7 +63,7 @@ header .canvas-container .global-nav li a:hover {
   color: #000;
 }
 
-header .canvas-container .theme-switch-button-wrapper {
+header .canvas-container .theme-switch-button {
   margin-top: 35px;
   float: right;
   width: 30px;
@@ -72,19 +72,19 @@ header .canvas-container .theme-switch-button-wrapper {
   border-radius: 50%;
 }
 
-header .canvas-container .theme-switch-button-wrapper:hover {
+header .canvas-container .theme-switch-button:hover {
   border-color: #000;
   cursor: pointer;
 }
 
-header .canvas-container .theme-switch-button-wrapper .theme-switch-button {
+header .canvas-container .theme-switch-button i {
   font-size: 20px;
   margin-left: 3px;
   line-height: 30px;
   color: #aaa;
 }
 
-header .canvas-container .theme-switch-button-wrapper:hover .theme-switch-button {
+header .canvas-container .theme-switch-button:hover i {
   color: #000;
 }
 
