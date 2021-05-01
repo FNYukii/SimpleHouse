@@ -1,42 +1,61 @@
-$('header .canvas-container .theme-switch-button').click(function(){
+$(function(){
 
-  // body
-  $('body').css('background-color','#333');
-
-  // header logo
-  $('header .canvas-container .logo').css('color','white');
-
-  // global-nav items
-  $('header .canvas-container .global-nav li a').css('color','#aaa');
-
-  // global-nav's hover state 
-  $('header .canvas-container .global-nav li a').hover(
-    function(){
-      $(this).css('color','white');
-    },
-    function(){
-      $(this).css('color','#aaa');
-    }
-  );
-
-  // theme-switch-button's hover state
-  $('header .canvas-container .theme-switch-button').hover(
-    function(){
-      $(this).css('border-color','white');
-      $('header .canvas-container .theme-switch-button i').css('color','white');
-    },
-    function(){
-      $(this).css('border-color','#aaa');
-      $('header .canvas-container .theme-switch-button i').css('color','#aaa');
-    }
-  );
+  
+  let isDarkTheme = 0; // 0 : light-theme, 1 : dark-theme.
 
 
-  // main
-  $('.section .details-container').css('border-color','#777');
-  $('.section .details-container h1').css('color','white');
-  $('.section .details-container h2').css('color','white');
-  // footer
-  $('footer').css('background-color','#222');
+  $('header .canvas-container .theme-switch-button').click(function(){
+
+    // global-navのhover疑似クラスのために、ダークテーマかどうか判定できるようにしておく。
+    isDarkTheme = 1 - isDarkTheme;
+    console.log("isDarkTheme : " + isDarkTheme);
+
+    // BODY
+    $('body').toggleClass('dark-theme-333');
+
+
+    // HEADER
+    $('header .canvas-container .logo').toggleClass('dark-theme-white');
+    $('header .canvas-container .global-nav li a').toggleClass('dark-theme-gray');
+
+    // global-nav's hover state 
+    $('header .canvas-container .global-nav li a').hover(
+      function(){
+        if(isDarkTheme){
+          $(this).addClass('dark-theme-white')
+        }
+      },
+      function(){
+        $(this).removeClass('dark-theme-white');
+      }
+    );
+    
+    // theme-switch-button's hover state
+    $('header .canvas-container .theme-switch-button').hover(
+      function(){
+        if(isDarkTheme){
+          $(this).addClass('dark-theme-white');
+          $('header .canvas-container .theme-switch-button i').addClass('dark-theme-white');
+        }
+      },
+      function(){
+        $(this).removeClass('dark-theme-white');
+        $('header .canvas-container .theme-switch-button i').removeClass('dark-theme-white');
+      }
+    );
+
+    
+    // MAIN
+    $('.section .details-container').toggleClass('dark-theme-dimgray');
+    $('.section .details-container h1').toggleClass('dark-theme-white');
+    $('.section .details-container h2').toggleClass('dark-theme-white');
+
+    
+    // FOOTER
+    $('footer').toggleClass('dark-theme-222');
+
+
+  });
+
 
 });

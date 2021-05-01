@@ -1,3 +1,21 @@
+/*
+* COLORS I USING
+* 
+* LIGHT THEME
+* #333 is used for logo, h1, h2, footer's background.
+* gray is used for global-nav's items, theme-switch-button, maintext(p, li) footer's p.
+* lightgray is used for section borderline.
+* white is used for footer's color.
+* 
+* DARK THEME
+* 
+* 
+* 
+*/
+
+
+
+
 /* STYLES FOR ALL PAGES */
 /* BASIC STYLES FOR ELEMENTS */
 * {
@@ -57,7 +75,7 @@ header .canvas-container .global-nav li {
 
 header .canvas-container .global-nav li a {
   text-decoration: none;
-  color: #777;
+  color: gray;
 }
 header .canvas-container .global-nav li a:hover {
   color: #000;
@@ -68,7 +86,7 @@ header .canvas-container .theme-switch-button {
   float: right;
   width: 30px;
   height: 30px;
-  border: 1px solid #aaa;
+  border: 1px solid gray;
   border-radius: 50%;
 }
 
@@ -81,7 +99,7 @@ header .canvas-container .theme-switch-button i {
   font-size: 20px;
   margin-left: 3px;
   line-height: 30px;
-  color: #aaa;
+  color: gray;
 }
 
 header .canvas-container .theme-switch-button:hover i {
@@ -102,12 +120,17 @@ footer .canvas-container .row {
 
 footer .canvas-container .row .column01 {
   width: 50%;
+  padding-right: 50px;
 }
 
 footer .canvas-container .row .column01 .logo {
   font-size: 50px;
   font-family: 'Inter', sans-serif;
   text-decoration: none;
+}
+
+footer .canvas-container .row .column01 p {
+  color: gray;
 }
 
 footer .canvas-container .row .column02 {
@@ -156,7 +179,7 @@ footer .canvas-container .row .column03 ul li a i {
 footer .canvas-container .copyright {
   text-align: center;
   margin-top: 70px;
-  color: #aaa;
+  color: gray;
 }
 
 
@@ -183,7 +206,7 @@ footer .canvas-container .copyright {
 
 .section .details-container {
   padding-bottom: 50px;
-  border-bottom: 1px solid #aaa;
+  border-bottom: 1px solid lightgray;
 }
 
 .last-section .details-container {
@@ -206,14 +229,14 @@ footer .canvas-container .copyright {
 
 .section .details-container p {
   font-size: 19px;
-  color: #888;
+  color: gray;
   margin: 30px;
   line-height: 30px;
 }
 
 .section .details-container ul li {
   font-size: 19px;
-  color: #888;
+  color: gray;
   margin: 15px;
   line-height: 30px;
 }
