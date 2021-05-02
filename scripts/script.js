@@ -33,7 +33,6 @@ $(function(){
 
     // HEADER
     $('header .canvas-container .logo').toggleClass('dark-theme-white');
-    $('header .canvas-container .global-nav li a').toggleClass('dark-theme-gray');
 
     // MAIN
     $('.section .details-container').toggleClass('dark-theme-dimgray');

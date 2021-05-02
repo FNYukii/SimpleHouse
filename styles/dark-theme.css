@@ -14,11 +14,6 @@
   border-color: dimgray !important;
 }
 
-/* for texts, global-nav's items*/
-.dark-theme-gray {
-  color: gray !important;
-}
-
 /* for logo, h1, h2, hover state */
 .dark-theme-white {
   color: white !important;
