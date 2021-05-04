@@ -195,14 +195,10 @@ footer .canvas-container .copyright {
 
 .section .canvas-container img {
   width: 100%;
-  height: 450px;
-  object-fit: cover;
 }
 
 .section .details-container img {
   width: 100%;
-  height: 350px;
-  object-fit: cover;
 }
 
 .section .details-container {
