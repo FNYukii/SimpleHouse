@@ -3,7 +3,7 @@
 * 
 * LIGHT THEME
 * #333 is used for logo, h1, h2, footer's background.
-* gray is used for global-nav's items, theme-switch, maintext(p, li) footer's p.
+* gray is used for global-nav's items, theme-button, maintext(p, li) footer's p.
 * lightgray is used for section borderline.
 * white is used for footer's color.
 * 
@@ -53,6 +53,7 @@ header {
   height: 100px;
 }
 
+/* logo*/
 header .canvas-container .logo {
   line-height: 100px;
   font-size: 50px;
@@ -61,6 +62,7 @@ header .canvas-container .logo {
   color: #333;
 }
 
+/* global-nav */
 header .canvas-container .global-nav {
   float: right;
   padding: 0;
@@ -82,7 +84,8 @@ header .canvas-container .global-nav li a:hover {
   color: #000;
 }
 
-header .canvas-container .theme-switch {
+/* theme-button */
+header .canvas-container .theme-button {
   margin-top: 35px;
   float: right;
   width: 30px;
@@ -91,20 +94,93 @@ header .canvas-container .theme-switch {
   border-radius: 50%;
 }
 
-header .canvas-container .theme-switch:hover {
+header .canvas-container .theme-button:hover {
   border-color: #000;
   cursor: pointer;
 }
 
-header .canvas-container .theme-switch i {
+header .canvas-container .theme-button i {
   font-size: 20px;
   margin-left: 3px;
   line-height: 30px;
   color: gray;
 }
 
-header .canvas-container .theme-switch:hover i {
+header .canvas-container .theme-button:hover i {
   color: #000;
+}
+
+/* hamburger-menu-button */
+header .canvas-container .hamburger-menu-button {
+  display: none;
+  float: right;
+  line-height: 100px;
+  font-size: 30px;
+  color: gray;
+  cursor: pointer;
+}
+
+
+/* HAMBURGER-MENU */
+header .hamburger-menu {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: dimgray;
+}
+
+/* hamburger-menu-button */
+header .hamburger-menu .hamburger-menu-button {
+  float: right;
+  margin-right: 21px;
+  line-height: 100px;
+  font-size: 33px;
+  color: white;
+  cursor: pointer;
+}
+
+/* global-nav in the hamburger-menu */
+header .hamburger-menu .global-nav {
+  margin-top: 100px;
+  list-style: none;
+  padding: 0;
+  
+}
+
+header .hamburger-menu .global-nav li {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+header .hamburger-menu .global-nav li a {
+  text-decoration: none;
+  font-size: 25px;
+  font-weight: bold;
+  color: white;
+}
+
+/* theme-button in the hamburger-menu */
+header .hamburger-menu .theme-button {
+  width: 50px;
+  height: 50px;
+  border: 1px solid white;
+  border-radius: 50%;
+  margin: 50px auto;
+  cursor: pointer;
+}
+
+header .hamburger-menu .theme-button:active {
+  transform: scale(0.93);
+}
+
+header .hamburger-menu .theme-button i {
+  color: white;
+  margin-left: 5px;
+  line-height: 50px;
+  font-size: 34px;
 }
 
 
@@ -284,6 +360,27 @@ main .section .details-container ul li {
 
 
 @media (max-width:800px){
+
+  /* HEADER */
+  header .canvas-container {
+    padding: 0 20px;
+  }
+
+  header .canvas-container .logo {
+    font-size: 45px;
+  }
+
+  header .canvas-container .global-nav {
+    display: none;
+  }
+
+  header .canvas-container .theme-button {
+    display: none;
+  }
+
+  header .canvas-container .hamburger-menu-button {
+    display: block;
+  }
 
   /* FOOTER */
   footer .canvas-container .row .column01,

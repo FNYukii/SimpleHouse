@@ -1,28 +1,19 @@
 $(function(){
 
-  
+  // THEME SWITCH
   let isDarkTheme = 0; // 0 : light-theme, 1 : dark-theme.
+  let isJustSwitched = 0; // テーマ変更直後にtheme-buttonの色を変更するためのフラグ変数
 
-  let isJustSwitched = 0;
-
-
-  $('header .canvas-container .theme-switch').click(function(){
+  $('.trigger-to-switch-theme').click(function(){
 
     isJustSwitched = 1;
     console.log("isJustSwitched : " + isJustSwitched);
     if(isJustSwitched){
       $(this).toggleClass('dark-theme-white');
-      $('header .canvas-container .theme-switch i').toggleClass('dark-theme-white');
+      $('header .canvas-container .theme-button i').toggleClass('dark-theme-white');
       isJustSwitched = 0;
       console.log("isJustSwitched : " + isJustSwitched);
     }
-
-    $(this).mouseout(function () { 
-      
-    });
-
-
-  
 
     // global-navのhover疑似クラスのために、ダークテーマかどうか判定できるようにしておく。
     isDarkTheme = 1 - isDarkTheme;
@@ -44,7 +35,6 @@ $(function(){
 
   });
 
-
   // global-nav's hover state 
   $('header .canvas-container .global-nav li a').hover(
     function(){
@@ -57,23 +47,29 @@ $(function(){
     }
   );
   
-  // theme-switch's hover state
+  // theme-button's hover state
   if(!isJustSwitched){
-
-    $('header .canvas-container .theme-switch').hover(
+    $('header .canvas-container .theme-button').hover(
       function(){
         if(isDarkTheme){
-        $(this).addClass('dark-theme-white');
-        $('header .canvas-container .theme-switch i').addClass('dark-theme-white');
+          $(this).addClass('dark-theme-white');
+          $('header .canvas-container .theme-button i').addClass('dark-theme-white');
+        }
+      },
+      function(){
+        $(this).removeClass('dark-theme-white');
+        $('header .canvas-container .theme-button i').removeClass('dark-theme-white');
       }
-    },
-    function(){
-      $(this).removeClass('dark-theme-white');
-      $('header .canvas-container .theme-switch i').removeClass('dark-theme-white');
-    }
     );
   }
 
+
+
+
+  // HAMBURGER-MENU SWITCH
+  $('.trigger-to-switch-hamburger-menu').click(function(){
+    $('header .hamburger-menu').fadeToggle();
+  });
 
 
 
