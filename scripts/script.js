@@ -35,9 +35,9 @@ $(function(){
     $('header .canvas-container .logo').toggleClass('dark-theme-white');
 
     // MAIN
-    $('.section .details-container').toggleClass('dark-theme-dimgray');
-    $('.section .details-container h1').toggleClass('dark-theme-white');
-    $('.section .details-container h2').toggleClass('dark-theme-white');
+    $('main .section .details-container').toggleClass('dark-theme-dimgray');
+    $('main .section .details-container h1').toggleClass('dark-theme-white');
+    $('main .section .details-container h2').toggleClass('dark-theme-white');
 
     // FOOTER
     $('footer').toggleClass('dark-theme-222');
