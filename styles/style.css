@@ -65,7 +65,7 @@ header .canvas-container .logo {
 /* global-nav */
 header .canvas-container .global-nav {
   float: right;
-  padding: 0;
+  padding-inline-start: 0;
   margin: 0;
   list-style: none;
   display: flex;
@@ -146,7 +146,7 @@ header .hamburger-menu .hamburger-menu-button {
 header .hamburger-menu .global-nav {
   margin-top: 100px;
   list-style: none;
-  padding: 0;
+  padding-inline-start: 0;
   
 }
 
@@ -217,7 +217,7 @@ footer .canvas-container .row .column02 {
 
 footer .canvas-container .row .column02 ul {
   list-style: none;
-  padding: 0;  
+  padding-inline-start: 0;
 }
 
 footer .canvas-container .row .column02 ul li {
@@ -238,7 +238,7 @@ footer .canvas-container .row .column03 {
 
 footer .canvas-container .row .column03 ul {
   list-style: none;
-  padding: 0;
+  padding-inline-start: 0;
   display: flex;
 }
 
@@ -283,8 +283,8 @@ main .section .details-container {
   border-bottom: 1px solid lightgray;
 }
 
-.last-section .details-container {
-  border: none;
+main .last-section .details-container {
+  border-bottom: none;
 }
 
 main .section .details-container h1 {
@@ -383,6 +383,10 @@ main .section .details-container ul li {
   }
 
   /* FOOTER */
+  footer {
+    text-align: center;
+  }
+
   footer .canvas-container .row .column01,
   footer .canvas-container .row .column02,
   footer .canvas-container .row .column03 {
@@ -390,8 +394,8 @@ main .section .details-container ul li {
     margin-bottom: 50px;
   }
 
-  footer {
-    text-align: center;
+  footer .canvas-container .row .column01 .logo {
+    font-size: 45px;
   }
 
   footer .canvas-container .row .column03 ul {
@@ -404,6 +408,10 @@ main .section .details-container ul li {
   main .section .details-container p {
     margin-left: 0;
     margin-right: 0;
+  }
+
+  main .section .details-container ul {
+    padding-inline-start: 20px;
   }
 
 }
