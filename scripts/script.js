@@ -6,13 +6,13 @@ $(function(){
   let isJustSwitched = 0;
 
 
-  $('header .canvas-container .theme-switch-button').click(function(){
+  $('header .canvas-container .theme-switch').click(function(){
 
     isJustSwitched = 1;
     console.log("isJustSwitched : " + isJustSwitched);
     if(isJustSwitched){
       $(this).toggleClass('dark-theme-white');
-      $('header .canvas-container .theme-switch-button i').toggleClass('dark-theme-white');
+      $('header .canvas-container .theme-switch i').toggleClass('dark-theme-white');
       isJustSwitched = 0;
       console.log("isJustSwitched : " + isJustSwitched);
     }
@@ -57,19 +57,19 @@ $(function(){
     }
   );
   
-  // theme-switch-button's hover state
+  // theme-switch's hover state
   if(!isJustSwitched){
 
-    $('header .canvas-container .theme-switch-button').hover(
+    $('header .canvas-container .theme-switch').hover(
       function(){
         if(isDarkTheme){
         $(this).addClass('dark-theme-white');
-        $('header .canvas-container .theme-switch-button i').addClass('dark-theme-white');
+        $('header .canvas-container .theme-switch i').addClass('dark-theme-white');
       }
     },
     function(){
       $(this).removeClass('dark-theme-white');
-      $('header .canvas-container .theme-switch-button i').removeClass('dark-theme-white');
+      $('header .canvas-container .theme-switch i').removeClass('dark-theme-white');
     }
     );
   }

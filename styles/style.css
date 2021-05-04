@@ -3,7 +3,7 @@
 * 
 * LIGHT THEME
 * #333 is used for logo, h1, h2, footer's background.
-* gray is used for global-nav's items, theme-switch-button, maintext(p, li) footer's p.
+* gray is used for global-nav's items, theme-switch, maintext(p, li) footer's p.
 * lightgray is used for section borderline.
 * white is used for footer's color.
 * 
@@ -82,7 +82,7 @@ header .canvas-container .global-nav li a:hover {
   color: #000;
 }
 
-header .canvas-container .theme-switch-button {
+header .canvas-container .theme-switch {
   margin-top: 35px;
   float: right;
   width: 30px;
@@ -91,19 +91,19 @@ header .canvas-container .theme-switch-button {
   border-radius: 50%;
 }
 
-header .canvas-container .theme-switch-button:hover {
+header .canvas-container .theme-switch:hover {
   border-color: #000;
   cursor: pointer;
 }
 
-header .canvas-container .theme-switch-button i {
+header .canvas-container .theme-switch i {
   font-size: 20px;
   margin-left: 3px;
   line-height: 30px;
   color: gray;
 }
 
-header .canvas-container .theme-switch-button:hover i {
+header .canvas-container .theme-switch:hover i {
   color: #000;
 }
 
