@@ -114,10 +114,10 @@ header .canvas-container .theme-button:hover i {
 header .canvas-container .hamburger-menu-button {
   display: none;
   float: right;
-  line-height: 100px;
   font-size: 30px;
   color: gray;
   cursor: pointer;
+  margin-top: 35px;
 }
 
 
@@ -136,10 +136,10 @@ header .hamburger-menu {
 header .hamburger-menu .hamburger-menu-button {
   float: right;
   margin-right: 21px;
-  line-height: 100px;
   font-size: 33px;
   color: white;
   cursor: pointer;
+  margin-top: 33px;
 }
 
 /* global-nav in the hamburger-menu */
