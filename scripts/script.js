@@ -1,11 +1,12 @@
 $(function(){
 
+
+
   // ページ読み込み時にテーマを設定する。
   console.log("isDarkTheme : " + localStorage.getItem('isDarkTheme'));
   if(localStorage.getItem('isDarkTheme') == "0"){
     console.log("light themeで開始");
   }else{
-    
     // ダークテーマに切り替える。
     // BODY
     $('body').css('transition','0s');
@@ -21,7 +22,6 @@ $(function(){
 
     // ログ出力
     console.log("dark themeで開始");
-
   }
   
   
@@ -29,7 +29,6 @@ $(function(){
   // テーマ切り替え処理
   let isJustSwitched = 0;
   $('.trigger-to-switch-theme').click(function(){
-
     // テーマ切り替え直後はマウスオーバー状態なので、theme-buttonを強調表示する。
     isJustSwitched = 1;
     if(isJustSwitched){
@@ -59,7 +58,6 @@ $(function(){
 
     // ログ出力
     console.log("isDarkTheme : " + localStorage.getItem('isDarkTheme'));
-
   });
 
 
@@ -76,7 +74,7 @@ $(function(){
       $(this).removeClass('dark-theme-white');
     }
   );
-  
+
   // theme-button's hover state
   if(!isJustSwitched){
     $('header .canvas-container .theme-button').hover(
@@ -100,6 +98,31 @@ $(function(){
     $('header .hamburger-menu').fadeToggle();
   });
 
+
+
+  // クリックされた画像をポップアップする。
+  $('.trigger-to-popup-image').click(function(){
+
+    // 画像のパスをpopup-itemのsrc属性に設定する。
+    var imageSource = $(this).attr('src');
+    console.log("image source : " + imageSource);
+    $('main .popup-background .popup-item').attr('src', imageSource);
+
+    
+
+    // モーダルウィンドウをポップアップする。
+    $('main .popup-background').fadeIn();
+
+
+
+
+
+
+
+
+
+
+  });
 
 
 
