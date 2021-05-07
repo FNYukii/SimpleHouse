@@ -2,7 +2,7 @@ $(function(){
 
 
 
-  // ページ読み込み時にテーマを設定する。
+  // SET THE THEME WHEN PAGE LOADS
   console.log("isDarkTheme : " + localStorage.getItem('isDarkTheme'));
   if(localStorage.getItem('isDarkTheme') == "0"){
     console.log("light themeで開始");
@@ -26,7 +26,7 @@ $(function(){
   
   
 
-  // テーマ切り替え処理
+  // SWITCH THE THEME
   let isJustSwitched = 0;
   $('.trigger-to-switch-theme').click(function(){
     // テーマ切り替え直後はマウスオーバー状態なので、theme-buttonを強調表示する。
@@ -62,7 +62,7 @@ $(function(){
 
 
 
-  // ダークテーマ時のhover疑似クラスの処理
+  // HOVER STATE FOR DARK THEME
   // global-nav's hover state 
   $('header .canvas-container .global-nav li a').hover(
     function(){
@@ -93,37 +93,36 @@ $(function(){
 
 
 
-  // HAMBURGER-MENU SWITCH
+  // SWITCH HAMBURGER MENU
   $('.trigger-to-switch-hamburger-menu').click(function(){
     $('header .hamburger-menu').fadeToggle();
   });
 
 
 
-  // クリックされた画像をポップアップする。
-  $('.trigger-to-popup-image').click(function(){
+  // POP UP PICTURE MODAL
+  $('.trigger-to-popup-modal').click(function(){
 
     // 画像のパスをpopup-itemのsrc属性に設定する。
     var imageSource = $(this).attr('src');
     console.log("image source : " + imageSource);
-    $('main .popup-background .popup-item').attr('src', imageSource);
-
-    
+    $('main .modal-item').attr('src', imageSource);
 
     // モーダルウィンドウをポップアップする。
-    $('main .popup-background').fadeIn();
-
-
-
-
-
-
-
-
-
+    $('main .modal-shadow').fadeIn();
+    $('main .modal-item').fadeIn();
 
   });
 
+
+
+  // CLOSE PICTURE MODAL
+  $('.trigger-to-close-modal').click(function(){
+
+    $('main .modal-shadow').fadeOut();
+    $('main .modal-item').fadeOut();
+
+  });
 
 
 

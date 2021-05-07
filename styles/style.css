@@ -264,7 +264,6 @@ footer .canvas-container .copyright {
 
 
 
-/* STYLES FOR INDEX.HTML */
 /* MAIN */
 main .section {
   margin-top: 50px;
@@ -319,7 +318,7 @@ main .section .details-container ul li {
 
 
 /* POPUP */
-main .popup-background {
+main .modal-shadow {
   display: none;
 
   position: fixed;
@@ -328,13 +327,15 @@ main .popup-background {
   width: 100%;
   height: 100vh;
   background-color: #000a;
+  cursor: pointer;
 }
 
-main .popup-background .popup-item {
+main .modal-item {
+  display: none;
+
   position: fixed;
   top: 0;
   left: 0;
-  display: block;
   /* margin: 100px auto 0; */
 
 }
