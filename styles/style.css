@@ -353,7 +353,7 @@ main .section .details-container ul li {
 
   /* CONTAINERS */
   .details-container {
-    width: 95%;
+    width: 90%;
   }
 
 }
@@ -383,6 +383,10 @@ main .section .details-container ul li {
   }
 
   /* FOOTER */
+  footer .canvas-container {
+    padding: 10px;
+  }
+
   footer {
     text-align: center;
   }
