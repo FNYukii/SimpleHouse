@@ -94,8 +94,26 @@ $(function(){
 
 
   // SWITCH HAMBURGER MENU
+  let isOpenHamburgerMenu = 0;
   $('.trigger-to-switch-hamburger-menu').click(function(){
-    $('header .hamburger-menu').fadeToggle();
+
+    
+
+    if(!isOpenHamburgerMenu){
+
+      $('header .hamburger-menu').fadeIn();
+      $('body,html').css('overflow-y', 'hidden');
+
+    }else{
+
+      $('header .hamburger-menu').fadeOut();
+      $('body,html').css('overflow-y', 'visible');
+
+    }
+
+    isOpenHamburgerMenu = 1 - isOpenHamburgerMenu;
+
+    
   });
 
 
@@ -112,6 +130,9 @@ $(function(){
     $('main .modal-shadow').fadeIn();
     $('main .modal-item').fadeIn();
 
+    // 画面スクロールを無効化する。
+    $('body,html').css('overflow-y', 'hidden');
+
   });
 
 
@@ -121,6 +142,9 @@ $(function(){
 
     $('main .modal-shadow').fadeOut();
     $('main .modal-item').fadeOut();
+
+    // 画面スクロールを有効に戻す。
+    $('body,html').css('overflow-y', 'visible');
 
   });
 
