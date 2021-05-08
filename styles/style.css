@@ -331,6 +331,21 @@ main .modal-shadow {
   cursor: pointer;
 }
 
+main .modal-close-button {
+  display: none;
+
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  font-size: 40px;
+  color: gray;
+  cursor: pointer;
+}
+
+main .modal-close-button:hover {
+  color: white;
+}
+
 main .modal-item {
   display: none;
 

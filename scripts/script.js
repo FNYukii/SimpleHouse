@@ -121,6 +121,7 @@ $(function(){
 
     // モーダルウィンドウをポップアップする。
     $('main .modal-shadow').fadeIn();
+    $('main .modal-close-button').fadeIn();
     $('main .modal-item').fadeIn();
 
     // 画面スクロールを無効化する。
@@ -136,6 +137,7 @@ $(function(){
 
     // modalを閉じる。
     $('main .modal-shadow').fadeOut();
+    $('main .modal-close-button').fadeOut();
     $('main .modal-item').fadeOut();
 
     // 画面スクロールを有効に戻す。
