@@ -2,12 +2,13 @@
 * COLORS I USING
 * 
 * LIGHT THEME
+* #000 is used for gloval-nav's item hover state.
 * #333 is used for logo, h1, h2, footer's background.
 * gray is used for global-nav's items, theme-button, maintext(p, li) footer's p.
 * lightgray is used for section borderline.
 * white is used for footer's color.
 * 
-* DARK THEME
+* 画像の縦横比は全て5:2
 * 
 * 
 * 
@@ -339,7 +340,10 @@ main .modal-item {
   left: 50%;
   transform: translate(-50%, -50%);
 
+  max-width: 100vw;
+
 }
+
 
 
 /* MEDIA QUERY */
