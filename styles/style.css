@@ -317,7 +317,7 @@ main .section .details-container ul li {
 }
 
 
-/* POPUP */
+/* IMAGE MODAL */
 main .modal-shadow {
   display: none;
 
@@ -326,17 +326,18 @@ main .modal-shadow {
   left: 0;
   width: 100%;
   height: 100vh;
-  background-color: #000a;
+  background-color: #000d;
   cursor: pointer;
 }
 
 main .modal-item {
   display: none;
 
+  /* 画面の中央に表示 */
   position: fixed;
-  top: 0;
-  left: 0;
-  /* margin: 100px auto 0; */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 
 }
 
