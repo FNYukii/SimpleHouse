@@ -14,12 +14,12 @@ $(function(){
     $('body').addClass('dark-theme-333');
     
     // HEADER
-    $('header .canvas-container .logo').addClass('dark-theme-white');
+    $('header .large-container .logo').addClass('dark-theme-white');
 
     // MAIN
-    $('main .section .details-container').addClass('dark-theme-dimgray');
-    $('main .section .details-container h1').addClass('dark-theme-white');
-    $('main .section .details-container h2').addClass('dark-theme-white');
+    $('main .section .small-container').addClass('dark-theme-dimgray');
+    $('main .section .small-container h1').addClass('dark-theme-white');
+    $('main .section .small-container h2').addClass('dark-theme-white');
 
     // FOOTER
     $('footer').addClass('dark-theme-222');
@@ -38,8 +38,8 @@ $(function(){
     // テーマ切り替え直後はマウスオーバー状態なので、theme-buttonを強調表示する。
     isJustSwitched = 1;
     if(isJustSwitched){
-      $('header .canvas-container .theme-button').toggleClass('dark-theme-white');
-      $('header .canvas-container .theme-button i').toggleClass('dark-theme-white');
+      $('header .large-container .theme-button').toggleClass('dark-theme-white');
+      $('header .large-container .theme-button i').toggleClass('dark-theme-white');
       isJustSwitched = 0;
     }
 
@@ -48,12 +48,12 @@ $(function(){
     $('body').toggleClass('dark-theme-333');
 
     // HEADER
-    $('header .canvas-container .logo').toggleClass('dark-theme-white');
+    $('header .large-container .logo').toggleClass('dark-theme-white');
 
     // MAIN
-    $('main .section .details-container').toggleClass('dark-theme-dimgray');
-    $('main .section .details-container h1').toggleClass('dark-theme-white');
-    $('main .section .details-container h2').toggleClass('dark-theme-white');
+    $('main .section .small-container').toggleClass('dark-theme-dimgray');
+    $('main .section .small-container h1').toggleClass('dark-theme-white');
+    $('main .section .small-container h2').toggleClass('dark-theme-white');
 
     // FOOTER
     $('footer').toggleClass('dark-theme-222');
@@ -74,7 +74,7 @@ $(function(){
 
   // HOVER STATE FOR DARK THEME
   // global-nav's hover state 
-  $('header .canvas-container .global-nav li a').hover(
+  $('header .large-container .global-nav li a').hover(
 
     function(){
       if(localStorage.getItem('isDarkTheme') == "1"){
@@ -89,17 +89,17 @@ $(function(){
 
   // theme-button's hover state
   if(!isJustSwitched){
-    $('header .canvas-container .theme-button').hover(
+    $('header .large-container .theme-button').hover(
 
       function(){
         if(localStorage.getItem('isDarkTheme') == "1"){
           $(this).addClass('dark-theme-white');
-          $('header .canvas-container .theme-button i').addClass('dark-theme-white');
+          $('header .large-container .theme-button i').addClass('dark-theme-white');
         }
       },
       function(){
         $(this).removeClass('dark-theme-white');
-        $('header .canvas-container .theme-button i').removeClass('dark-theme-white');
+        $('header .large-container .theme-button i').removeClass('dark-theme-white');
       }
 
     );
