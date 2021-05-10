@@ -1,35 +1,34 @@
 $(function(){
 
 
-
   // SET THE THEME WHEN PAGE LOADS
   console.log("isDarkTheme : " + localStorage.getItem('isDarkTheme'));
   if(localStorage.getItem('isDarkTheme') == "0"){
     console.log("light themeで開始");
   }else{
-
-    // ダークテーマに切り替える。
-    // BODY
-    $('body').css('transition','0s');
-    $('body').addClass('dark-theme-333');
-    
-    // HEADER
-    $('header .large-container .logo').addClass('dark-theme-white');
-
-    // MAIN
-    $('main .section').addClass('dark-theme-dimgray');
-    $('main .section h1').addClass('dark-theme-white');
-    $('main .section h2').addClass('dark-theme-white');
-
-    // FOOTER
-    $('footer').addClass('dark-theme-222');
-
-    // ログ出力
+    switchTheme();
     console.log("dark themeで開始");
+  }
+
+
+
+  // method switch theme
+  function switchTheme(){
+
+    // body
+    $('body').toggleClass('dark-theme-333');
+    // header
+    $('header .large-container .logo').toggleClass('dark-theme-white');
+    // main
+    $('main .section').toggleClass('dark-theme-dimgray');
+    $('main .section h1').toggleClass('dark-theme-white');
+    $('main .section h2').toggleClass('dark-theme-white');
+    // footer
+    $('footer').toggleClass('dark-theme-222');
 
   }
-  
-  
+
+
 
   // SWITCH THE THEME
   let isJustSwitched = 0;
@@ -43,21 +42,10 @@ $(function(){
       isJustSwitched = 0;
     }
 
-    // BODY
+    // テーマ切り替え
     $('body').css('transition','0.8s');
-    $('body').toggleClass('dark-theme-333');
-
-    // HEADER
-    $('header .large-container .logo').toggleClass('dark-theme-white');
-
-    // MAIN
-    $('main .section').toggleClass('dark-theme-dimgray');
-    $('main .section h1').toggleClass('dark-theme-white');
-    $('main .section h2').toggleClass('dark-theme-white');
-
-    // FOOTER
-    $('footer').toggleClass('dark-theme-222');
-
+    switchTheme();
+    
     // localStorageの値を更新する。
     if(localStorage.getItem('isDarkTheme') == "0"){
       localStorage.setItem('isDarkTheme',"1");
@@ -145,7 +133,6 @@ $(function(){
 
 
 
-
   // CLOSE PICTURE MODAL
   function closeModal(){
 
@@ -159,11 +146,13 @@ $(function(){
 
   }
 
+
   // if you click modal shadow, modal fades out.
   $('.trigger-to-close-modal').click(function(){
     closeModal();
   });
 
+  
   // if you push down esc key, modal fades out.
   $(window).keydown(function(e){
     if(e.keyCode === 27){
