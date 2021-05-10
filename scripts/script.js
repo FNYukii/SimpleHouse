@@ -17,9 +17,9 @@ $(function(){
     $('header .large-container .logo').addClass('dark-theme-white');
 
     // MAIN
-    $('main .section .small-container').addClass('dark-theme-dimgray');
-    $('main .section .small-container h1').addClass('dark-theme-white');
-    $('main .section .small-container h2').addClass('dark-theme-white');
+    $('main .section').addClass('dark-theme-dimgray');
+    $('main .section h1').addClass('dark-theme-white');
+    $('main .section h2').addClass('dark-theme-white');
 
     // FOOTER
     $('footer').addClass('dark-theme-222');
@@ -51,9 +51,9 @@ $(function(){
     $('header .large-container .logo').toggleClass('dark-theme-white');
 
     // MAIN
-    $('main .section .small-container').toggleClass('dark-theme-dimgray');
-    $('main .section .small-container h1').toggleClass('dark-theme-white');
-    $('main .section .small-container h2').toggleClass('dark-theme-white');
+    $('main .section').toggleClass('dark-theme-dimgray');
+    $('main .section h1').toggleClass('dark-theme-white');
+    $('main .section h2').toggleClass('dark-theme-white');
 
     // FOOTER
     $('footer').toggleClass('dark-theme-222');
