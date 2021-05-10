@@ -20,7 +20,7 @@ $(function(){
     // header
     $('header .large-container .logo').toggleClass('dark-theme-white');
     // main
-    $('main .section').toggleClass('dark-theme-dimgray');
+    $('main .section > div:last-child').toggleClass('dark-theme-dimgray');
     $('main .section h1').toggleClass('dark-theme-white');
     $('main .section h2').toggleClass('dark-theme-white');
     // footer
@@ -152,7 +152,7 @@ $(function(){
     closeModal();
   });
 
-  
+
   // if you push down esc key, modal fades out.
   $(window).keydown(function(e){
     if(e.keyCode === 27){
