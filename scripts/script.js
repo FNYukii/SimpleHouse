@@ -1,20 +1,24 @@
 $(function(){
 
+  // variables
+  let isJustSwitched = 0;
+  let isOpenHamburgerMenu = 0;
 
-  // SET THE THEME WHEN PAGE LOADS
+
+
   console.log("isDarkTheme : " + localStorage.getItem('isDarkTheme'));
   if(localStorage.getItem('isDarkTheme') == "0"){
     console.log("light themeで開始");
   }else{
-    switchTheme();
+    toggleTheme();
     console.log("dark themeで開始");
   }
 
 
 
-  // method switch theme
-  function switchTheme(){
 
+  
+  function toggleTheme(){
     // body
     $('body').toggleClass('dark-theme-333');
     // header
@@ -25,14 +29,11 @@ $(function(){
     $('main .section h2').toggleClass('dark-theme-white');
     // footer
     $('footer').toggleClass('dark-theme-222');
-
   }
 
 
 
-  // SWITCH THE THEME
-  let isJustSwitched = 0;
-  $('.trigger-to-switch-theme').click(function(){
+  function switchTheme(){
 
     // テーマ切り替え直後はマウスオーバー状態なので、theme-buttonを強調表示する。
     isJustSwitched = 1;
@@ -44,8 +45,8 @@ $(function(){
 
     // テーマ切り替え
     $('body').css('transition','0.8s');
-    switchTheme();
-    
+    toggleTheme();
+
     // localStorageの値を更新する。
     if(localStorage.getItem('isDarkTheme') == "0"){
       localStorage.setItem('isDarkTheme',"1");
@@ -56,49 +57,11 @@ $(function(){
     // ログ出力
     console.log("isDarkTheme : " + localStorage.getItem('isDarkTheme'));
 
-  });
-
-
-
-  // HOVER STATE FOR DARK THEME
-  // global-nav's hover state 
-  $('header .large-container .global-nav li a').hover(
-
-    function(){
-      if(localStorage.getItem('isDarkTheme') == "1"){
-        $(this).addClass('dark-theme-white')
-      }
-    },
-    function(){
-      $(this).removeClass('dark-theme-white');
-    }
-
-  );
-
-  // theme-button's hover state
-  if(!isJustSwitched){
-    $('header .large-container .theme-button').hover(
-
-      function(){
-        if(localStorage.getItem('isDarkTheme') == "1"){
-          $(this).addClass('dark-theme-white');
-          $('header .large-container .theme-button i').addClass('dark-theme-white');
-        }
-      },
-      function(){
-        $(this).removeClass('dark-theme-white');
-        $('header .large-container .theme-button i').removeClass('dark-theme-white');
-      }
-
-    );
   }
 
 
 
-  // SWITCH HAMBURGER MENU
-  let isOpenHamburgerMenu = 0;
-  $('.trigger-to-switch-hamburger-menu').click(function(){
-
+  function switchHamburgerMenu(){
     if(!isOpenHamburgerMenu){
       $('header .hamburger-menu').fadeIn();
       $('body,html').css('overflow-y', 'hidden');
@@ -106,15 +69,12 @@ $(function(){
       $('header .hamburger-menu').fadeOut();
       $('body,html').css('overflow-y', 'visible');
     }
-
     isOpenHamburgerMenu = 1 - isOpenHamburgerMenu;
-    
-  });
+  }
 
 
 
-  // POP UP PICTURE MODAL
-  $('.trigger-to-popup-modal').click(function(){
+  function popupModal(){
 
     // 画像のパスをpopup-itemのsrc属性に設定する。
     var imageSource = $(this).attr('src');
@@ -129,13 +89,12 @@ $(function(){
     // 画面スクロールを無効化する。
     $('body,html').css('overflow-y', 'hidden');
 
-  });
+  } 
 
 
-
-  // CLOSE PICTURE MODAL
+  
   function closeModal(){
-
+  
     // modalを閉じる。
     $('main .modal-shadow').fadeOut();
     $('main .modal-close-button').fadeOut();
@@ -145,6 +104,55 @@ $(function(){
     $('body,html').css('overflow-y', 'visible');
 
   }
+  
+
+
+
+  // TRIGGERS
+  // switch the theme
+  $('.trigger-to-switch-theme').click(function(){
+    switchTheme();
+  });
+
+
+  // switch the hamburger menu
+  $('.trigger-to-switch-hamburger-menu').click(function(){
+    switchHamburgerMenu();
+  });
+
+
+  // global-nav's hover state in the dark theme
+  $('header .large-container .global-nav li a').hover(
+    function(){
+      if(localStorage.getItem('isDarkTheme') == "1"){
+        $(this).addClass('dark-theme-white')
+      }
+    },
+    function(){
+      $(this).removeClass('dark-theme-white');
+    }
+  );
+
+
+  // theme-button's hover state in the dark theme
+  $('header .large-container .theme-button').hover(
+    function(){
+      if(localStorage.getItem('isDarkTheme') == "1"){
+        $(this).addClass('dark-theme-white');
+        $('header .large-container .theme-button i').addClass('dark-theme-white');
+      }
+    },
+    function(){
+      $(this).removeClass('dark-theme-white');
+      $('header .large-container .theme-button i').removeClass('dark-theme-white');
+    }
+  );
+  
+
+  // popup picture modal
+  $('.trigger-to-popup-modal').click(function(){
+    popupModal();
+  });
 
 
   // if you click modal shadow, modal fades out.

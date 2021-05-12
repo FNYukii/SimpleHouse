@@ -391,10 +391,11 @@ main .idea-section .large-container .idea-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  column-gap: 10px;
 }
 
 main .idea-section .large-container .idea-container .idea-item {
-  width: 340px;
+  width: 320px;
   margin: 30px 0;
   text-align: center;
 }
@@ -537,10 +538,6 @@ main .idea-section .large-container .idea-container .idea-item a:nth-child(2) {
   main .idea-section .large-container {
     padding: 0;
     width: 90%;
-  }
-
-  main .idea-section .large-container .idea-container {
-    column-gap: 50px;
   }
 
 }
