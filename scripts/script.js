@@ -30,7 +30,7 @@ $(function(){
     $('main .section h2').toggleClass('dark-theme-white');
     // footer
     $('footer').toggleClass('dark-theme-222');
-    
+
   }
 
 
@@ -64,6 +64,7 @@ $(function(){
 
 
   function switchHamburgerMenu(){
+
     if(!isOpenHamburgerMenu){
       $('header .hamburger-menu').fadeIn();
       $('body,html').css('overflow-y', 'hidden');
@@ -72,6 +73,7 @@ $(function(){
       $('body,html').css('overflow-y', 'visible');
     }
     isOpenHamburgerMenu = 1 - isOpenHamburgerMenu;
+
   }
 
 
@@ -79,7 +81,6 @@ $(function(){
   function popupModal(imageSource){
 
     // 画像のパスをpopup-itemのsrc属性に設定する。
-    
     $('main .modal-item').attr('src', imageSource);
 
     // モーダルウィンドウをポップアップする。
