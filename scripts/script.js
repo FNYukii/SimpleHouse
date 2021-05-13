@@ -19,6 +19,7 @@ $(function(){
 
   
   function toggleTheme(){
+
     // body
     $('body').toggleClass('dark-theme-333');
     // header
@@ -29,6 +30,7 @@ $(function(){
     $('main .section h2').toggleClass('dark-theme-white');
     // footer
     $('footer').toggleClass('dark-theme-222');
+    
   }
 
 
