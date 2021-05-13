@@ -74,11 +74,10 @@ $(function(){
 
 
 
-  function popupModal(){
+  function popupModal(imageSource){
 
     // 画像のパスをpopup-itemのsrc属性に設定する。
-    var imageSource = $(this).attr('src');
-    console.log("image source : " + imageSource);
+    
     $('main .modal-item').attr('src', imageSource);
 
     // モーダルウィンドウをポップアップする。
@@ -151,7 +150,10 @@ $(function(){
 
   // popup picture modal
   $('.trigger-to-popup-modal').click(function(){
-    popupModal();
+    var imageSource = $(this).attr('src');
+    console.log("image source : " + imageSource);
+    
+    popupModal(imageSource);
   });
 
 
