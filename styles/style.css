@@ -409,10 +409,15 @@ main .idea-section .idea-container .idea-item {
   text-align: center;
 }
 
-main .idea-section .idea-container .idea-item img {
+main .idea-section .idea-container .idea-item a img {
   width: 100%;
   height: 170px;
   object-fit: cover;
+}
+
+main .idea-section .idea-container .idea-item a:nth-child(2) {
+  display: inline-block;
+  margin-top: 15px;
 }
 
 main .idea-section {
@@ -518,6 +523,7 @@ main .form-section form button:hover {
   .idea-container {
     width: 95%;
   }
+
 }
 
 
@@ -527,10 +533,6 @@ main .form-section form button:hover {
   /* CONTAINERS */
   .large-container {
     width: 100%;
-  }
-
-  .idea-container {
-    width: 680px;
   }
 
 
@@ -546,12 +548,8 @@ main .form-section form button:hover {
 
   /* GALLERY.HTML */
   /* MAIN */
-  main .idea-section .large-container {
-    padding: 0 20px;
-  }
-
-  main .idea-section .large-container .idea-container {
-    justify-content: space-evenly;
+  .idea-container {
+    width: 680px;
   }
 
 
